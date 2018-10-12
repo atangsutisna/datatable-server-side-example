@@ -1,6 +1,6 @@
 <?php
 
-function connect_db($host, $username, $password) 
+function connect_db($host, $dbname, $username, $password) 
 {
     $charset = 'utf8mb4';
     $collate = 'utf8mb4_unicode_ci';
@@ -14,7 +14,7 @@ function connect_db($host, $username, $password)
             PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES $charset COLLATE $collate"
         ];    
         
-        return new PDO("mysql:host=$host;dbname=giri_db", $username, $password, $options);
+        return new PDO("mysql:host=$host;dbname={$dbname}", $username, $password, $options);
     } 
     catch (PDOException $ex) 
     {

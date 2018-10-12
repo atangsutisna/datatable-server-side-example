@@ -11,7 +11,7 @@
     <title>Theme Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="http://localhost:8080/css/bootstrap.min.css" rel="stylesheet"> 
+    <link href="css/bootstrap.min.css" rel="stylesheet"> 
     <!-- Bootstrap theme -->
     
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
@@ -20,11 +20,11 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!-- datatable -->
-    <link href="http://localhost:8080/plugins/DataTables/datatables.min.css" rel="stylesheet" type="text/css"> 
+    <link href="plugins/DataTables/datatables.min.css" rel="stylesheet" type="text/css"> 
 
 </head>
 <body>
-    <div class="container-fluid theme-showcase" role="main">
+    <div class="container-fluid theme-showcase" role="main" style="margin-top: 10px;">
         <table class="table table-striped" id="table_sls_order">
             <thead>
                 <th>No. PO Cust</th>
@@ -46,9 +46,9 @@
         </table>    
     </div> <!-- /container -->
 
-    <script src="http://localhost:8080/js/jquery-3.3.1.min.js"></script>
-    <script src="http://localhost:8080/js/bootstrap.min.js"></script>    
-    <script src="http://localhost:8080/plugins/DataTables/datatables.min.js"></script>
-    <script src="http://localhost:8080/js/sls_order.js"></script>    
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>    
+    <script src="plugins/DataTables/datatables.min.js"></script>
+    <script src="js/sls_order.js"></script>    
 </body>
 </html>

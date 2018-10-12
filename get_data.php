@@ -5,10 +5,11 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 $host = "localhost";
+$dbname = "giri_db";
 $username = "root";
-$password = "bippo";
+$password = "";
 
-$conn = connect_db($host, $username, $password);
+$conn = connect_db($host, $dbname, $username, $password);
 
 $response['data'] = array();
 $start = isset($_GET['start']) ? $_GET['start'] : 0;

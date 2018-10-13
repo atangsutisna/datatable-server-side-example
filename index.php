@@ -19,12 +19,15 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <!-- datatable -->
-    <link href="plugins/DataTables/datatables.min.css" rel="stylesheet" type="text/css"> 
 
+    <!-- for styling button -->
+    <link rel="stylesheet" type="text/css" href="plugins/DataTables/datatables.min.css"/>
 </head>
 <body>
     <div class="container-fluid theme-showcase" role="main" style="margin-top: 10px;">
+        <div class="pull-right">
+            <input id="form-search" type="text" class="form-control" placeholder="search.."/>
+        </div>
         <table class="table table-striped" id="table_sls_order">
             <thead>
                 <th>No. PO Cust</th>
@@ -46,9 +49,14 @@
         </table>    
     </div> <!-- /container -->
 
+    
     <script src="js/jquery-3.3.1.min.js"></script>
+    <!--
     <script src="js/bootstrap.min.js"></script>    
     <script src="plugins/DataTables/datatables.min.js"></script>
+    -->
+    <script type="text/javascript" src="plugins/DataTables/datatables.min.js"></script>
     <script src="js/sls_order.js"></script>    
+
 </body>
 </html>

@@ -1,19 +1,17 @@
-/** 
-jQuery.fn.DataTable.Api.register( 'buttons.exportData()', function ( options ) {
-    if ( this.context.length ) {
-        var jsonResult = $.ajax({
-            url: 'myServerSide.json?page=all',
-            data: {search: $("#search").val()},
-            success: function (result) {
-                //Do nothing
-            },
-            async: false
-        });
-
-        return {body: jsonResult.responseJSON.data, header: $("#myTable thead tr th").map(function() { return this.innerHTML; }).get()};
+accounting.settings = {
+    currency: {
+        symbol : "Rp",
+        format: "%s%v", // controls output: %s = symbol, %v = value/number (can be object: see below)
+        decimal : ",",  // decimal point separator
+        thousand: ".",  // thousands separator
+        precision : 2   // decimal places
+    },
+    number: {
+        precision : 0,  // default precision on numbers is 0
+        thousand: ".",
+        decimal : ","
     }
-} );
-**/
+}        
 
 $('document').ready(function(){      
     var base_uri = window.location.origin;
@@ -99,7 +97,10 @@ $('document').ready(function(){
             },
             { 
                 "orderable": false,
-                "data" : "harga"
+                "data" : "harga",
+                "render": function(data) {
+                    return accounting.formatMoney(data);
+                }
             },
             { 
                 "orderable": false,
